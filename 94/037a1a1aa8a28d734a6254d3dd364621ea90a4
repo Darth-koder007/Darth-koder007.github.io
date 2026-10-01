@@ -1,0 +1,79 @@
+vite.config.ts
+  s_f0c6a093b18fbc::t_2ffb48ab929ebb 1-12
+eslint.config.js
+  s_f0c6a093b18fbc::t_c3271c82925c2b 1-32
+  s_f0c6a093b18fbc::t_6b62fee90ca36c 33-34
+e2e/portfolio.spec.ts
+  s_f0c6a093b18fbc::t_c62ffcf39ce859 1-78
+  s_f0c6a093b18fbc::t_cd1e95cfbf1f28 79-84
+src/App.tsx
+  s_f0c6a093b18fbc::t_8d6fe95bebc348 13
+  s_f0c6a093b18fbc::t_af562cc15d7c40 1-12,14-32
+.gitignore
+  s_f0c6a093b18fbc::t_2b110fb1035f27 1-7
+.github/workflows/deploy.yml
+  s_f0c6a093b18fbc::t_52a728499aa723 1-70
+README.md
+  s_f0c6a093b18fbc::t_f8985199ee68df 1-53
+.github/workflows/ci.yml
+  s_f0c6a093b18fbc::t_81d13ca800798f 1-58
+package.json
+  s_f0c6a093b18fbc::t_706e63c876c9c0 8
+  s_f0c6a093b18fbc::t_927e9cb77e2b80 1-7,9-63
+src/components/ProjectSection.tsx
+  s_f0c6a093b18fbc::t_2f22ad78698f92 1-35
+  s_f0c6a093b18fbc::t_9cf200a46a84ba 36-38
+PLAN.md
+  s_f0c6a093b18fbc::t_b7aa8a523e0505 15-50
+  s_f0c6a093b18fbc::t_d535b7970a08a9 12-14
+  s_f0c6a093b18fbc::t_dda34cdec41891 51-53
+src/components/ScrollReveal.tsx
+  s_f0c6a093b18fbc::t_4e4fe8c1451de9 1-50
+src/main.tsx
+  s_f0c6a093b18fbc::t_cd9343f3c199ce 1-17
+index.html
+  s_f0c6a093b18fbc::t_c993ea4fff57da 1-16
+.husky/pre-commit
+  s_f0c6a093b18fbc::t_1eea2e40d9c499 1
+src/test-setup.ts
+  s_f0c6a093b18fbc::t_5ead8b2bc70e6d 2-16
+  s_f0c6a093b18fbc::t_ee002e0d1aedaf 17-28
+  s_f0c6a093b18fbc::t_8d4db80b30bc99 1
+src/components/ProjectSection.test.tsx
+  s_f0c6a093b18fbc::t_1ecbdf9d838c68 1-53
+src/data/projects.ts
+  s_f0c6a093b18fbc::t_7a65812cbf0a99 1-56
+src/styles/app.css
+  s_f0c6a093b18fbc::t_1bdeb3ff03d158 1-112
+src/components/ScrollReveal.test.tsx
+  s_f0c6a093b18fbc::t_d0b318cfa58f62 76-78
+  s_f0c6a093b18fbc::t_effb96005ea7fa 60-62
+  s_f0c6a093b18fbc::t_1982dd7b55b543 1
+  s_f0c6a093b18fbc::t_ad9895ff7b66eb 2-59,63-75,79-94
+playwright.config.ts
+  s_f0c6a093b18fbc::t_815f2a528a01c5 6
+  s_f0c6a093b18fbc::t_f941ceb012325b 1-5,7-13
+.prettierrc
+  s_f0c6a093b18fbc::t_a39e532ac63f54 1-6
+tsconfig.json
+  s_f0c6a093b18fbc::t_04ecbd9ca94869 16
+  s_f0c6a093b18fbc::t_3ce3aa8f0ad479 1-15,17-19
+pnpm-lock.yaml
+  s_f0c6a093b18fbc::t_c10ffe5dbaea2d 1-4805
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "94037a1a1aa8a28d734a6254d3dd364621ea90a4",
+  "prompts": {},
+  "sessions": {
+    "s_f0c6a093b18fbc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cdf59d10-8ac1-40c5-8e78-59b7400789f3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
