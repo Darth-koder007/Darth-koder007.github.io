@@ -25,7 +25,7 @@ The front door for [the other four projects in this portfolio](..): a single pag
 
 **A plain `<a>` for project links, not the design system's `Button`.** `Button` renders a `<button>` element — correct for in-page actions, wrong semantics for navigation. Styling the link directly off the design tokens (`var(--ds-color-accent)`, etc.) uses the same public CSS-variable contract Project 0's own README documents, without miscasting a navigation link as a button click.
 
-**Contact is a GitHub link, not a guessed email address.** No personal contact email was available to put on a public, job-hunting-facing site, and publishing a work email address on it would mix identities in a way that doesn't serve the stated purpose. GitHub is real, working, and verifiable right now.
+**Contact is a personal email, LinkedIn, and GitHub — not a work email, and not a guessed address.** The work email tied to the current employer would mix identities in a way that doesn't serve a job-hunting site's purpose; all three links here are real, working, and verifiable right now.
 
 ## Real limitations (not hidden)
 
