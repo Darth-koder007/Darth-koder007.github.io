@@ -21,7 +21,16 @@ export function App() {
 
       <ScrollReveal className="contact">
         <h2>Contact</h2>
-        <p>
+        <p className="contact-links">
+          <a className="project-link project-link--live" href="mailto:vj2010sn@gmail.com">
+            Email →
+          </a>
+          <a
+            className="project-link project-link--live"
+            href="https://www.linkedin.com/in/vijaysingh-75b335b4"
+          >
+            LinkedIn →
+          </a>
           <a className="project-link project-link--live" href="https://github.com/Darth-koder007">
             GitHub →
           </a>
