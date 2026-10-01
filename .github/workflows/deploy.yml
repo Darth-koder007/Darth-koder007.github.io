@@ -1,0 +1,70 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+        with:
+          path: portfolio-site
+
+      - name: Checkout design system
+        uses: actions/checkout@v4
+        with:
+          repository: Darth-koder007/00-design-system
+          path: 00-design-system
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: portfolio-site/pnpm-lock.yaml
+
+      - name: Build the design system's dependency packages
+        working-directory: 00-design-system
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm --filter @ds/tokens run build
+          pnpm --filter @ds/components run build
+
+      - name: Build the site
+        working-directory: portfolio-site
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+
+      # NOTE: if this repo is deployed as darth-koder007.github.io's custom-domain root (per
+      # PLAN.md's M4.1 note on repurposing that existing repo), add a CNAME file to `public/`
+      # with the domain before this step — not added here since this assistant has no visibility
+      # into that repo's current domain configuration.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: portfolio-site/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text-primary);
+  font-family: var(--ds-font-family-base);
+  line-height: var(--ds-line-height-normal);
+}
+
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: var(--ds-spacing-16) var(--ds-spacing-6);
+}
+
+.hero {
+  margin-bottom: var(--ds-spacing-32);
+}
+
+.hero h1 {
+  font-size: var(--ds-font-size-2xl);
+  font-weight: var(--ds-font-weight-bold);
+  margin: 0 0 var(--ds-spacing-4);
+}
+
+.hero p {
+  font-size: var(--ds-font-size-lg);
+  color: var(--ds-color-text-secondary);
+  max-width: 60ch;
+  margin: 0;
+}
+
+.project-section {
+  margin-bottom: var(--ds-spacing-32);
+}
+
+.project-section h2 {
+  font-size: var(--ds-font-size-xl);
+  font-weight: var(--ds-font-weight-bold);
+  margin: 0 0 var(--ds-spacing-4);
+}
+
+.project-pitch {
+  margin: 0 0 var(--ds-spacing-4);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-spacing-2);
+  margin-bottom: var(--ds-spacing-4);
+}
+
+.project-pull-quote {
+  border-left: 3px solid var(--ds-color-accent);
+  padding-left: var(--ds-spacing-4);
+  margin: 0 0 var(--ds-spacing-4);
+  font-style: italic;
+  color: var(--ds-color-text-secondary);
+}
+
+.project-link {
+  display: inline-block;
+  padding: var(--ds-spacing-2) var(--ds-spacing-4);
+  border-radius: var(--ds-radius-md);
+  font-weight: var(--ds-font-weight-medium);
+  text-decoration: none;
+}
+
+.project-link--live {
+  background: var(--ds-color-accent);
+  color: var(--ds-color-surface-raised);
+}
+
+.project-link--live:hover {
+  background: var(--ds-color-accent-hover);
+}
+
+.project-link--pending {
+  background: transparent;
+  border: 1px solid var(--ds-color-border);
+  color: var(--ds-color-text-secondary);
+  cursor: default;
+}
+
+.contact {
+  margin-top: var(--ds-spacing-32);
+  padding-top: var(--ds-spacing-16);
+  border-top: 1px solid var(--ds-color-border);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+.scroll-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    transition: none;
+  }
+}

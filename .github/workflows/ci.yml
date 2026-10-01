@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+        with:
+          path: portfolio-site
+
+      # This repo depends on the design system via a local workspace link (see package.json:
+      # "@ds/components": "link:../00-design-system/packages/components"), not a published npm
+      # dependency — same cross-repo layout as Project 1's CI.
+      - name: Checkout design system
+        uses: actions/checkout@v4
+        with:
+          repository: Darth-koder007/00-design-system
+          path: 00-design-system
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: portfolio-site/pnpm-lock.yaml
+
+      - name: Build the design system's dependency packages
+        working-directory: 00-design-system
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm --filter @ds/tokens run build
+          pnpm --filter @ds/components run build
+
+      - name: Install, lint, typecheck, test, build
+        working-directory: portfolio-site
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm lint
+          pnpm typecheck
+          pnpm test
+          pnpm build
+
+      - name: Install Playwright browser
+        working-directory: portfolio-site
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Run e2e tests (zero dead links, heading structure, keyboard nav, reduced motion)
+        working-directory: portfolio-site
+        run: pnpm test:e2e
