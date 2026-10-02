@@ -22,7 +22,8 @@ export const PROJECTS: ProjectEntry[] = [
     tech: ["TypeScript", "React", "Vite", "Storybook", "Playwright"],
     pullQuote:
       'Focus management for Modal and Table\'s controlled/uncontrolled duality were the two places where "looks right" and "is actually correct" diverged the most in testing.',
-    status: "in-progress",
+    status: "live",
+    url: "https://darth-koder007.github.io/00-design-system/",
   },
   {
     id: "01-design-system-ai-assistant",
@@ -32,7 +33,8 @@ export const PROJECTS: ProjectEntry[] = [
     tech: ["TypeScript", "ts-morph", "Ollama", "Anthropic"],
     pullQuote:
       "Rules stay deterministic; the LLM is scoped to explanation and is never the thing deciding what's wrong.",
-    status: "in-progress",
+    status: "live",
+    url: "https://github.com/Darth-koder007/01-design-system-ai-assistant",
   },
   {
     id: "02-agentic-codemod-tool",
@@ -41,7 +43,8 @@ export const PROJECTS: ProjectEntry[] = [
       "A CLI that turns a plain-English instruction into a reviewable diff: deterministic AST transforms for known instruction shapes, an LLM for everything else, both gated by the same safety rail — write the real file, type-check it, always revert — before a diff is ever shown.",
     tech: ["TypeScript", "ts-morph", "Ollama", "Anthropic"],
     pullQuote: "The safety rail verifies the output, not fidelity to the instruction.",
-    status: "in-progress",
+    status: "live",
+    url: "https://github.com/Darth-koder007/02-agentic-codemod-tool",
   },
   {
     id: "03-rag-doc-search",
@@ -51,6 +54,7 @@ export const PROJECTS: ProjectEntry[] = [
     tech: ["TypeScript", "ts-morph", "Ollama embeddings", "RAG"],
     pullQuote:
       "The interesting engineering problem in a RAG system isn't picking an embedding model — it's whether the thing fails loudly or silently.",
-    status: "in-progress",
+    status: "live",
+    url: "https://github.com/Darth-koder007/03-rag-doc-search",
   },
 ];

@@ -36,17 +36,27 @@ test("has zero dead links — every <a> has a real, non-placeholder href", async
   }
 });
 
-test("unfinished projects show an honest in-progress state, not a broken link", async ({
+test("every project section shows either a real link or a non-link in-progress marker, never both or neither", async ({
   page,
 }) => {
   await page.goto("/");
   await scrollThroughPage(page);
 
-  const inProgressMarkers = page.getByText("In progress");
-  await expect(inProgressMarkers).toHaveCount(await inProgressMarkers.count());
-  expect(await inProgressMarkers.count()).toBeGreaterThan(0);
+  const sections = page.locator(".project-section");
+  const count = await sections.count();
+  expect(count).toBeGreaterThan(0);
 
-  // Every "In progress" marker must not itself be a link (no dead href to click through to).
+  for (let i = 0; i < count; i++) {
+    const section = sections.nth(i);
+    const linkCount = await section.getByRole("link", { name: /view project/i }).count();
+    const pendingCount = await section.getByText("In progress").count();
+    // Exactly one of the two states, never both (that would mean a stale "in progress" marker
+    // left behind after a project went live) and never neither (that would be a dead end).
+    expect(linkCount + pendingCount).toBe(1);
+  }
+
+  // Whatever "In progress" markers exist right now must not themselves be links.
+  const inProgressMarkers = page.getByText("In progress");
   const markerTagNames = await inProgressMarkers.evaluateAll((els) => els.map((el) => el.tagName));
   for (const tagName of markerTagNames) {
     expect(tagName).not.toBe("A");
