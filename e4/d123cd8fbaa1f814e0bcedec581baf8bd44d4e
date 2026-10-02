@@ -1,0 +1,25 @@
+e2e/portfolio.spec.ts
+  s_f0c6a093b18fbc::t_55d5efafbcc7df 39,45-56,58-59
+src/data/projects.ts
+  s_f0c6a093b18fbc::t_55a535247c9c01 57-58
+  s_f0c6a093b18fbc::t_a3026b0fb78821 36-37
+  s_f0c6a093b18fbc::t_bb2b30d7328ced 26
+  s_f0c6a093b18fbc::t_166c1fe082e2e3 25
+  s_f0c6a093b18fbc::t_7f079de708fb13 46-47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "e4d123cd8fbaa1f814e0bcedec581baf8bd44d4e",
+  "prompts": {},
+  "sessions": {
+    "s_f0c6a093b18fbc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cdf59d10-8ac1-40c5-8e78-59b7400789f3",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
