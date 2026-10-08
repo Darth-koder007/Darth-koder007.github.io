@@ -1,0 +1,20 @@
+cv/cv.yaml
+  s_d747536c0b48bd::t_93703870505216 95
+  s_d747536c0b48bd::t_771b60d2a5e0e3 94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "1b694c3d89f34baa463c364922d8d232367e7496",
+  "prompts": {},
+  "sessions": {
+    "s_d747536c0b48bd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e8a97e09-0443-4b91-9a76-cd4d6b41cd37",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
