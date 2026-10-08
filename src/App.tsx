@@ -22,6 +22,14 @@ export function App() {
       <ScrollReveal className="contact">
         <h2>Contact</h2>
         <p className="contact-links">
+          <a
+            className="project-link project-link--live"
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume →
+          </a>
           <a className="project-link project-link--live" href="mailto:vj2010sn@gmail.com">
             Email →
           </a>

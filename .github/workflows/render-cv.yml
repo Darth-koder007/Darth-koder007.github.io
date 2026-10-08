@@ -1,0 +1,47 @@
+name: Render CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cv/**"
+      - ".github/workflows/render-cv.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-cv
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      # Checked out with a PAT (not the default GITHUB_TOKEN) so the commit below pushes as an
+      # authenticated user and triggers deploy.yml's `on: push` — pushes made with the default
+      # GITHUB_TOKEN are deliberately excluded from triggering other workflows.
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CV_DEPLOY_PAT }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install RenderCV
+        run: pip install "rendercv[full]"
+
+      - name: Render CV
+        run: rendercv render cv/cv.yaml -o rendercv_output
+
+      - name: Publish PDF to public/
+        run: |
+          mkdir -p public
+          cp cv/rendercv_output/*.pdf public/cv.pdf
+
+      - name: Commit rendered PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: render cv.yaml to public/cv.pdf"
+          file_pattern: public/cv.pdf

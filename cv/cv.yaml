@@ -1,0 +1,93 @@
+cv:
+  name: Vijay Singh
+  location: Berlin, Germany
+  email: vj2010sn@gmail.com
+  social_networks:
+    - network: LinkedIn
+      username: vijaysingh-75b335b4
+    - network: GitHub
+      username: Darth-koder007
+  sections:
+    summary:
+      - Senior frontend engineer specializing in design systems and developer tooling, with a
+        growing focus on applying LLMs to code analysis and developer workflows. Built
+        static-analysis tooling (a TypeScript parser) to track design-system adoption at scale;
+        now building agentic, LLM-powered extensions of that tooling.
+    experience:
+      - company: Delivery Hero
+        position: Senior Software Engineer
+        location: Berlin, Germany
+        start_date: 2024-10
+        end_date: present
+        highlights:
+          - Own Cape, Delivery Hero's design system (component library and design tokens shipped
+            as an NPM package, adopted org-wide).
+          - Led Cape Crawler, automated design-system adoption tracking across frontend repos via
+            static analysis.
+          - Built Cape Fly, an agentic Slack bot using retrieval-augmented generation (RAG) and
+            tool-calling (Gemini / Google Vertex AI) to answer design-system questions with cited
+            sources, confidence scoring, and a cost-aware opt-in ambient mode.
+          - Built a canonical design-system manifest powering an MCP design-to-code pipeline and
+            the Figma-to-production design-token pipeline (Figma Variables to GitHub to token
+            package to component package); grounds AI-generated UI in real component contracts.
+          - Extended the design system into Help Center, a B2C product, including a
+            performance-engineering workstream on critical-rendering-path and cold-start
+            optimization.
+      - company: Delivery Hero
+        position: Software Engineer 2
+        location: Berlin, Germany
+        start_date: 2021-10
+        end_date: 2024-09
+        highlights:
+          - Built reusable, scalable UI components for Delivery Hero's back-office design system
+            and drove onboarding of product teams onto it.
+          - Created a metrics dashboard and API tracking UI-component usage across frontend repos,
+            using static code analysis and a TypeScript parser; also revamped the design system's
+            foundational design tokens.
+          - Automated the release and publish process for private NPM packages in a mono-repo
+            setup using GitHub Actions.
+      - company: InMobi
+        position: SDE II / SDE I
+        location: Bangalore, India
+        start_date: 2019-01
+        end_date: 2021-10
+        highlights:
+          - Built the UI for the Customer Data Platform, contributing to component design,
+            UX discussions, and project architecture.
+          - Led the UI team for the Audience Intelligence Platform, mentoring team members through
+            delivery with unit and integration testing.
+          - Took part in bootstrapping InMobi's design system and built reusable components and
+            dynamically generated component docs.
+      - company: Paytm
+        position: Software Engineer
+        location: Noida, India
+        start_date: 2018-05
+        end_date: 2019-01
+        highlights:
+          - Built SalaryAccounts Management and Web Remittance, corporate net-banking and
+            money-transfer web applications.
+      - company: Wadi.com
+        position: Software Development Engineer
+        location: Gurgaon, India
+        start_date: 2016-01
+        end_date: 2018-05
+        highlights:
+          - Lead contributor on Wadi Grocery's mobile web app and a new checkout platform (one-click
+            checkout, social login, OTP auth) for grocery delivery across KSA and UAE.
+    education:
+      - institution: Dr. A.P.J. Abdul Kalam Technical University
+        area: Computer Science
+        degree: BTech
+        start_date: 2012-01
+        end_date: 2016-01
+    skills:
+      - label: Frontend
+        details: React, TypeScript, JavaScript, Node.js
+      - label: Design Systems
+        details: Component libraries, design tokens, Figma API, adoption tooling
+      - label: AI / Agentic Tooling
+        details: LLMs, RAG, MCP, tool-calling, Google Vertex AI (Gemini)
+      - label: Infrastructure
+        details: GitHub Actions, CI/CD, static analysis, mono-repos
+design:
+  theme: classic
