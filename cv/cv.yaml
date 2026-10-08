@@ -91,3 +91,5 @@ cv:
         details: GitHub Actions, CI/CD, static analysis, mono-repos
 design:
   theme: classic
+  typography:
+    alignment: justified-with-no-hyphenation
