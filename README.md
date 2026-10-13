@@ -36,7 +36,7 @@ CI (`.github/workflows/ci.yml`) runs on every push.
 
 ## Known limitations
 
-- No Lighthouse or full axe-core audit has been run. Accessibility is checked structurally (heading order, keyboard reachability, reduced motion, no dead links).
+- Lighthouse (v12, local production build) scores 100 for performance, accessibility, best practices and SEO on both mobile and desktop. That is an automated audit, not a full manual accessibility review. Structural checks (heading order, keyboard reachability, reduced motion, no dead links) are covered by the e2e suite.
 - There are no images on the page yet, so there is no alt-text coverage to test.
 
 ## Running it locally

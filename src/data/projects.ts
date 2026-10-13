@@ -11,6 +11,8 @@ export interface ProjectEntry {
    * a checked-in, auditable config beats a build-time cross-repo parse. */
   status: ProjectStatus;
   url?: string;
+  /** Link text; defaults to "View project". */
+  linkLabel?: string;
 }
 
 export const PROJECTS: ProjectEntry[] = [
@@ -24,6 +26,7 @@ export const PROJECTS: ProjectEntry[] = [
       'Focus management for Modal and Table\'s controlled/uncontrolled duality were the two places where "looks right" and "is actually correct" diverged the most in testing.',
     status: "live",
     url: "https://darth-koder007.github.io/00-design-system/",
+    linkLabel: "View live demo",
   },
   {
     id: "01-design-system-ai-assistant",
@@ -35,6 +38,7 @@ export const PROJECTS: ProjectEntry[] = [
       "Rules stay deterministic; the LLM is scoped to explanation and is never the thing deciding what's wrong.",
     status: "live",
     url: "https://github.com/Darth-koder007/01-design-system-ai-assistant",
+    linkLabel: "View on GitHub",
   },
   {
     id: "02-agentic-codemod-tool",
@@ -45,6 +49,7 @@ export const PROJECTS: ProjectEntry[] = [
     pullQuote: "The safety rail verifies the output, not fidelity to the instruction.",
     status: "live",
     url: "https://github.com/Darth-koder007/02-agentic-codemod-tool",
+    linkLabel: "View on GitHub",
   },
   {
     id: "03-rag-doc-search",
@@ -56,5 +61,6 @@ export const PROJECTS: ProjectEntry[] = [
       "The interesting engineering problem in a RAG system isn't picking an embedding model — it's whether the thing fails loudly or silently.",
     status: "live",
     url: "https://github.com/Darth-koder007/03-rag-doc-search",
+    linkLabel: "View on GitHub",
   },
 ];

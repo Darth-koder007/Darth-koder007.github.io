@@ -10,7 +10,7 @@ export function ProjectSection({ project }: ProjectSectionProps) {
   return (
     <ScrollReveal className="project-section">
       <Card padding="lg">
-        <h2>{project.name}</h2>
+        <h3>{project.name}</h3>
         <p className="project-pitch">{project.pitch}</p>
         <div className="project-tags">
           {project.tech.map((tag) => (
@@ -22,7 +22,7 @@ export function ProjectSection({ project }: ProjectSectionProps) {
         <blockquote className="project-pull-quote">{project.pullQuote}</blockquote>
         {project.status === "live" && project.url ? (
           <a className="project-link project-link--live" href={project.url}>
-            View project →
+            {project.linkLabel ?? "View project"} →
           </a>
         ) : (
           <span
