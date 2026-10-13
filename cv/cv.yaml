@@ -1,6 +1,7 @@
 cv:
   name: Vijay Singh
   location: Berlin, Germany
+  headline: Senior Software Engineer | Design Systems, Developer Platforms & Applied AI | TypeScript, React, Node.js
   email: vj2010sn@gmail.com
   social_networks:
     - network: LinkedIn
@@ -9,10 +10,7 @@ cv:
       username: Darth-koder007
   sections:
     summary:
-      - Senior frontend engineer specializing in design systems and developer tooling, with a
-        growing focus on applying LLMs to code analysis and developer workflows. Built
-        static-analysis tooling (a TypeScript parser) to track design-system adoption at scale;
-        now building agentic, LLM-powered extensions of that tooling.
+      - "Senior engineer who owns the engineering side of a design system, from token architecture and component APIs to versioning, migration codemods, visual regression testing and adoption analytics. Built Cape for Delivery Hero and added AI tooling on top of it: a RAG Slack bot and an MCP design-to-code pipeline. Also led a Node/BigQuery/Kubernetes KPI dashboard for executive leadership."
     experience:
       - company: Delivery Hero
         position: Senior Software Engineer
@@ -20,32 +18,44 @@ cv:
         start_date: 2024-10
         end_date: present
         highlights:
-          - Own Cape, Delivery Hero's design system (component library and design tokens shipped
-            as an NPM package, adopted org-wide).
-          - Led Cape Crawler, automated design-system adoption tracking across frontend repos via
-            static analysis.
-          - Built Cape Fly, an agentic Slack bot using retrieval-augmented generation (RAG) and
-            tool-calling (Gemini / Google Vertex AI) to answer design-system questions with cited
-            sources, confidence scoring, and a cost-aware opt-in ambient mode.
-          - Built a canonical design-system manifest powering an MCP design-to-code pipeline and
-            the Figma-to-production design-token pipeline (Figma Variables to GitHub to token
-            package to component package); grounds AI-generated UI in real component contracts.
-          - Extended the design system into Help Center, a B2C product, including a
-            performance-engineering workstream on critical-rendering-path and cold-start
-            optimization.
+          - Designed and built Cape Fly solo, an agentic RAG Slack bot (Gemini on Vertex AI), used
+            by about half of the design-system community; replies went from ~1 day to under 10
+            seconds. Ambient mode calls the LLM only after a private opt-in.
+          - Created Cape Crawler (TypeScript static analysis), which audits design-system adoption
+            across the company's React repositories and identifies migration targets.
+          # [verify] Q3 count of product-team plugins migrated (10+ was only expected, not confirmed)
+          - Led pre-release hardening for Cape v1.0 and wrote the 0.11 to 1.0 migration codemod;
+            5+ product-team plugins adopted in Q2.
+          # [verify] hours saved per release on manual theme validation
+          - Authored the RFC and built multi-theme visual regression testing in CI across 20+
+            themes, replacing manual theme validation.
+          - Authored and executed the deprecation of the legacy design system (references
+            updated, repos archived, consumers guided).
+          - Designed a canonical Cape manifest and custom MCP server that, with Figma's MCP,
+            ground Claude's UI generation in real component and token contracts.
+          - "Brought Cape into Help Center, a B2C product: B2C themes, WCAG 2.1 AA accessibility work, co-owned the codebase with the product teams."
+          - Lead engineer on the KPI dashboard for executive engineering leadership (React, Node.js (Hono), BigQuery, Redis,
+            Kubernetes); took over frontend delivery when the project was at risk, escalated API
+            needs early, shipped on the predicted date; led 2 engineers.
+          - Built the internal developer portal frontend from scratch (architecture, CI/CD, sanity tests);
+            shipped chat, application and deployment pages in under a month alongside 3+ backend
+            engineers.
       - company: Delivery Hero
-        position: Software Engineer 2
+        position: Software Engineer II
         location: Berlin, Germany
         start_date: 2021-10
         end_date: 2024-09
         highlights:
-          - Built reusable, scalable UI components for Delivery Hero's back-office design system
-            and drove onboarding of product teams onto it.
-          - Created a metrics dashboard and API tracking UI-component usage across frontend repos,
-            using static code analysis and a TypeScript parser; also revamped the design system's
-            foundational design tokens.
-          - Automated the release and publish process for private NPM packages in a mono-repo
-            setup using GitHub Actions.
+          - "Re-architected the design-token structure with the design lead: shipped themes grew 5 to 14 (later 18 incl. B2C) and token bundle size fell 15%; tokens ship as CSS and JS variables across 9 brands in light/dark modes."
+          - Built Cape's first component and wrote its engineering guidelines; designed the
+            overlay foundation (Dialog, Drawer, Tooltip) and built Grid and Button; added RTL
+            support; authored the Table ADR.
+          - Set up Cape's CI/CD with Docker-based visual regression testing, semantic versioning
+            with changesets, automated releases, per-PR Storybook previews, Codacy analysis
+            (coverage 90%+), token bundle-size check.
+          - Automated component API docs (-0.5 days per component); cut dev-environment setup from
+            10+ to ~4 min and Storybook refresh from 30 s to <10 ms.
+          - Mentored 7+ contributors; interviewed 5+ graduate candidates.
       - company: InMobi
         position: SDE II / SDE I
         location: Bangalore, India
@@ -81,14 +91,14 @@ cv:
         start_date: 2012-01
         end_date: 2016-01
     skills:
+      - label: Design systems
+        details: component APIs, design tokens (Figma Variables, Tokens Studio), Storybook, visual regression testing, semantic versioning (changesets), codemods, WCAG 2.1 AA
       - label: Frontend
-        details: React, TypeScript, JavaScript, Node.js
-      - label: Design Systems
-        details: Component libraries, design tokens, Figma API, adoption tooling
-      - label: AI / Agentic Tooling
-        details: LLMs, RAG, MCP, tool-calling, Google Vertex AI (Gemini)
-      - label: Infrastructure
-        details: GitHub Actions, CI/CD, static analysis, mono-repos
+        details: React, TypeScript, JavaScript, Vite, Rollup, pnpm, Turborepo
+      - label: Backend & infra
+        details: Node.js, Hono, BigQuery, Redis, Docker, Kubernetes, GitHub Actions, CI/CD
+      - label: AI tooling
+        details: RAG, tool calling, MCP, Google Vertex AI (Gemini), Claude
 design:
   theme: classic
   typography:
