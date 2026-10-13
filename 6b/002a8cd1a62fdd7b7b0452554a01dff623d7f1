@@ -1,0 +1,35 @@
+README.md
+  s_684e76441c653a::t_f01cd0ab7e9e5f 39
+e2e/portfolio.spec.ts
+  s_684e76441c653a::t_f76501a62f6640 51,66,72-73,80
+index.html
+  s_684e76441c653a::t_dad154d1cefab7 6,9
+public/robots.txt
+  s_684e76441c653a::t_25bd8e5520785a 1-2
+src/App.tsx
+  s_684e76441c653a::t_0efc3743752eb5 4-31,36-37,39-40,42-62,64-87,90-91
+src/components/ProjectSection.tsx
+  s_684e76441c653a::t_77893288c429f6 13,25
+src/data/profile.ts
+  s_684e76441c653a::t_ba18b83514a4f3 1-46
+src/data/projects.ts
+  s_684e76441c653a::t_201e92d7c8c684 14-15,29,41,52,64
+src/styles/app.css
+  s_684e76441c653a::t_9d6bd96512aa6a 14,16,20,26-35,39,43-59,63-70,73-74,77-122,146,161,166-182,193
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "6b002a8cd1a62fdd7b7b0452554a01dff623d7f1",
+  "prompts": {},
+  "sessions": {
+    "s_684e76441c653a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_684e76441c653a",
+        "model": "unknown"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
