@@ -35,7 +35,7 @@ cv:
             ground Claude's UI generation in real component and token contracts.
           - "Brought Cape into Help Center, a B2C product: B2C themes, WCAG 2.1 AA accessibility work, co-owned the codebase with the product teams."
           - Lead engineer on the KPI dashboard for executive engineering leadership (React, Node.js (Hono), BigQuery, Redis,
-            Kubernetes) - took over frontend delivery when the project was at risk, escalated API
+            Kubernetes); took over frontend delivery when the project was at risk, escalated API
             needs early, shipped on the predicted date; led 2 engineers.
           - Built the internal developer portal frontend from scratch (architecture, CI/CD, sanity tests);
             shipped chat, application and deployment pages in under a month alongside 3+ backend
@@ -50,7 +50,7 @@ cv:
           - Built Cape's first component and wrote its engineering guidelines; designed the
             overlay foundation (Dialog, Drawer, Tooltip) and built Grid and Button; added RTL
             support; authored the Table ADR.
-          - Set up Cape's CI/CD - Docker-based visual regression testing, semantic versioning
+          - Set up Cape's CI/CD with Docker-based visual regression testing, semantic versioning
             with changesets, automated releases, per-PR Storybook previews, Codacy analysis
             (coverage 90%+), token bundle-size check.
           - Automated component API docs (-0.5 days per component); cut dev-environment setup from
