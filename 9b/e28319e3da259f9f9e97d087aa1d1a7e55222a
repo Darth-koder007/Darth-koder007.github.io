@@ -1,0 +1,19 @@
+README.md
+  s_005693ff5e72a4::t_0294dec0c8b5cf 3,5,7-10,12-14,16,18,20-22,24,26-27,29,31-35,37,39-40,44,46-54,56-59,62,64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "9be28319e3da259f9f9e97d087aa1d1a7e55222a",
+  "prompts": {},
+  "sessions": {
+    "s_005693ff5e72a4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_005693ff5e72a4",
+        "model": "unknown"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
