@@ -15,7 +15,7 @@ cv:
       - company: Delivery Hero
         position: Senior Software Engineer
         location: Berlin, Germany
-        start_date: 2024-10
+        start_date: 2024-07
         end_date: present
         highlights:
           - Designed and built Cape Fly solo, an agentic RAG Slack bot (Gemini on Vertex AI), used
@@ -44,7 +44,7 @@ cv:
         position: Software Engineer II
         location: Berlin, Germany
         start_date: 2021-10
-        end_date: 2024-09
+        end_date: 2024-06
         highlights:
           - "Re-architected the design-token structure with the design lead: shipped themes grew 5 to 14 (later 18 incl. B2C) and token bundle size fell 15%; tokens ship as CSS and JS variables across 9 brands in light/dark modes."
           - Built Cape's first component and wrote its engineering guidelines; designed the
