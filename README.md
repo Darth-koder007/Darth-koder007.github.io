@@ -1,53 +1,64 @@
 # Portfolio Site
 
-The front door for [the other four projects in this portfolio](..): a single page, one section per project, built with [Project 0's own component library](../00-design-system) rather than a generic template. Replaces a dead, unfinished 2018 "Start Bootstrap" scaffold that was still live at `darth-koder007.github.io`.
+Source for [darth-koder007.github.io](https://darth-koder007.github.io): a single page with one section per project, built with my own component library rather than a generic template.
 
-## Why this is a real dependency, not a demo
+The projects it links to:
 
-`@ds/components` and `@ds/tokens` are linked in as the actual UI layer (`Card`, `Badge`, and the raw design tokens via CSS custom properties) — not vendored copies, not a reimplementation. If Project 0 changes a token or a component's markup, this site picks it up on the next build. That's the point: a portfolio site built with your own design system is a stronger signal than any framework choice.
+- [00-design-system](https://github.com/Darth-koder007/00-design-system): React component library, token pipeline, Storybook, visual regression tests
+- [01-design-system-ai-assistant](https://github.com/Darth-koder007/01-design-system-ai-assistant): static analysis plus an LLM explanation layer for design-system violations
+- [02-agentic-codemod-tool](https://github.com/Darth-koder007/02-agentic-codemod-tool): plain-English instruction to a reviewable, type-checked diff
+- [03-rag-doc-search](https://github.com/Darth-koder007/03-rag-doc-search): grounded Q&A over the design system's component source
+
+My CV is published at [`/cv.pdf`](https://darth-koder007.github.io/cv.pdf) and generated from [`cv/cv.yaml`](cv/README.md).
+
+## Why the design system is a real dependency
+
+`@ds/components` and `@ds/tokens` are linked in as the actual UI layer (`Card`, `Badge`, and the design tokens as CSS custom properties), not vendored copies. If a token or component changes in the design system, this site picks it up on the next build.
 
 ## How it works
 
-- `src/data/projects.ts` — one entry per project: name, pitch, tech tags, a real pull-quote pulled from that project's own README, and a hand-maintained `status: "live" | "in-progress"`. Checked in and auditable, not parsed from `PROGRESS.md` at build time — four entries doesn't justify that complexity.
-- `src/components/ScrollReveal.tsx` — a from-scratch `IntersectionObserver`-driven reveal (no animation library), skipped entirely when `prefers-reduced-motion` is set.
-- `src/components/ProjectSection.tsx` — renders a project as a real `<a href>` when `status: "live"` and a URL is configured, or a plain, non-interactive "In progress" marker otherwise. Never a `#` or a 404 — see the e2e tests below.
+- `src/data/projects.ts`: one entry per project (name, pitch, tech tags, a pull-quote from that project's README, and a hand-maintained `status: "live" | "in-progress"`).
+- `src/components/ScrollReveal.tsx`: a from-scratch `IntersectionObserver` reveal with no animation library, skipped when `prefers-reduced-motion` is set.
+- `src/components/ProjectSection.tsx`: renders a real `<a href>` when a project is `live` and has a URL, otherwise a non-interactive "In progress" marker. Never a `#` or a 404.
 
-## Verified, not just asserted
+## Tests
 
-- 7 unit tests (Vitest + Testing Library): `ProjectSection`'s live/in-progress/fallback rendering, `ScrollReveal`'s observer-triggered and reduced-motion paths (with real jsdom gaps found and fixed along the way — jsdom implements neither `matchMedia` nor `IntersectionObserver`, so both needed explicit polyfills in `src/test-setup.ts`).
-- 6 Playwright e2e tests against a real running dev server: zero console errors; every `<a>` on the page has a real, non-placeholder `href` (the literal "no dead links" invariant this project's plan calls for); unfinished projects render no `<a>` at all; exactly one `h1` with an `h2` per section; the contact link is keyboard-focusable; `prefers-reduced-motion` is honored.
-- A real screenshot-based check caught a false alarm worth recording: a full-page Playwright screenshot taken without manually scrolling only showed the first two project sections, with a large empty gap after — looked like a broken reveal. Scrolling through the page first (the way a real visitor would) showed all four sections and the contact link rendering correctly. The bug was in the verification method, not the site; documented in `PLAN.md` rather than silently discarded once it turned out to be a non-issue.
-- Both the dev server and the production (`vite build` + `vite preview`) build were visually checked and produced an identical render with zero console errors.
+- 7 unit tests (Vitest + Testing Library): `ProjectSection` live / in-progress / fallback rendering, and `ScrollReveal` observer and reduced-motion paths. jsdom implements neither `matchMedia` nor `IntersectionObserver`, so `src/test-setup.ts` polyfills both.
+- 6 Playwright e2e tests against a running dev server: no console errors, every `<a>` has a real `href`, unfinished projects render no `<a>`, one `h1` with an `h2` per section, the contact link is keyboard-focusable, and `prefers-reduced-motion` is honored.
+
+CI (`.github/workflows/ci.yml`) runs on every push.
 
 ## Design decisions
 
-**Hand-maintained link-status config, not a build-time `PROGRESS.md` parse.** The plan allows either. Four project entries is well within the range where a checked-in, human-edited file is more honest and auditable than a cross-repo parsing step that could silently break.
+- **Hand-maintained link status, not a build-time parse of another repo.** With four entries, a checked-in, human-edited file is more honest and easier to audit.
+- **A plain `<a>` for project links, not the design system's `Button`.** `Button` renders a `<button>`, which is the wrong semantics for navigation. The link is styled directly off the public token variables.
+- **Contact is email, LinkedIn and GitHub.** No contact form, no work email.
 
-**A plain `<a>` for project links, not the design system's `Button`.** `Button` renders a `<button>` element — correct for in-page actions, wrong semantics for navigation. Styling the link directly off the design tokens (`var(--ds-color-accent)`, etc.) uses the same public CSS-variable contract Project 0's own README documents, without miscasting a navigation link as a button click.
+## Known limitations
 
-**Contact is a personal email, LinkedIn, and GitHub — not a work email, and not a guessed address.** The work email tied to the current employer would mix identities in a way that doesn't serve a job-hunting site's purpose; all three links here are real, working, and verifiable right now.
-
-## Real limitations (not hidden)
-
-- **M4.1's literal instruction — "repurpose the existing `darth-koder007.github.io` repo, keep the domain config" — couldn't be done as written.** This assistant has no access to that repo's current state (the dead 2018 template, whatever CNAME/domain config it holds). Built as a new repo instead, matching every other project in this portfolio; `.github/workflows/deploy.yml` has an explicit note on what needs adding (a `CNAME` file) once this is actually merged into that repo or repointed at that domain.
-- **Deployment (M4.4) and the Lighthouse pass (M4.5) are blocked on the same thing every other project's public-flip milestone is: GitHub account access.** The deploy workflow is written and should work once pushed, but hasn't run for real. Lighthouse needs a live URL to audit, which doesn't exist yet.
-- **Accessibility is verified structurally (heading order, keyboard reachability, reduced-motion, zero dead links), not audited with a full axe-core pass.** The e2e suite checks specific, real things rather than claiming a comprehensive accessibility audit it doesn't do.
-- **No images exist on the page yet**, so "alt text on all images" (M4.5) is vacuously satisfied rather than actually exercised.
+- No Lighthouse or full axe-core audit has been run. Accessibility is checked structurally (heading order, keyboard reachability, reduced motion, no dead links).
+- There are no images on the page yet, so there is no alt-text coverage to test.
 
 ## Running it locally
 
-```bash
-# from this portfolio's root, Project 0 must be built first:
-cd ../00-design-system && pnpm install && pnpm --filter @ds/tokens run build && pnpm --filter @ds/components run build
+The design system must sit next to this repo and be built first:
 
-cd ../04-portfolio-site
+```bash
+git clone https://github.com/Darth-koder007/00-design-system.git
+cd 00-design-system && pnpm install \
+  && pnpm --filter @ds/tokens run build \
+  && pnpm --filter @ds/components run build
+cd ..
+
+git clone https://github.com/Darth-koder007/Darth-koder007.github.io.git
+cd Darth-koder007.github.io
 pnpm install
-pnpm dev              # http://localhost:5173
-pnpm build             # production build to dist/
-pnpm test              # unit tests
-pnpm test:e2e          # e2e tests (starts its own dev server)
+pnpm dev          # http://localhost:5173
+pnpm build        # production build to dist/
+pnpm test         # unit tests
+pnpm test:e2e     # e2e tests (starts its own dev server)
 ```
 
-## Status
+## Deployment
 
-Everything above is verified locally, including real visual checks of both the dev server and the production build. What's pending is external: this repo isn't yet merged into the real `darth-koder007.github.io` repo, and deployment/Lighthouse both need that GitHub access this assistant doesn't have.
+Pushes to `main` build the site (checking out and building the design system first) and publish it with GitHub Pages via `.github/workflows/deploy.yml`.
