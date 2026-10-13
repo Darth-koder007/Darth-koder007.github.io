@@ -1,0 +1,19 @@
+cv/cv.yaml
+  s_ea21e74513ff4d::t_41b3087db07ab4 18,47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "7cf74c57c5b8d03526e3b1a17a8c7b59e98d0be1",
+  "prompts": {},
+  "sessions": {
+    "s_ea21e74513ff4d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_ea21e74513ff4d",
+        "model": "unknown"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
