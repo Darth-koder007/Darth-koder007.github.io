@@ -1,0 +1,19 @@
+cv/cv.yaml
+  s_df5ff756fdd04a::t_235dcf07232eef 18,47
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "4248067ddec0a75b239dd371c519033e2469e6d8",
+  "prompts": {},
+  "sessions": {
+    "s_df5ff756fdd04a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_df5ff756fdd04a",
+        "model": "unknown"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
