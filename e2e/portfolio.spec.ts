@@ -48,7 +48,7 @@ test("every project section shows either a real link or a non-link in-progress m
 
   for (let i = 0; i < count; i++) {
     const section = sections.nth(i);
-    const linkCount = await section.getByRole("link", { name: /view project/i }).count();
+    const linkCount = await section.locator("a.project-link--live").count();
     const pendingCount = await section.getByText("In progress").count();
     // Exactly one of the two states, never both (that would mean a stale "in progress" marker
     // left behind after a project went live) and never neither (that would be a dead end).
@@ -63,21 +63,21 @@ test("every project section shows either a real link or a non-link in-progress m
   }
 });
 
-test("has exactly one h1 and every project uses h2 — correct heading structure", async ({
+test("has exactly one h1, section h2s, and one h3 per project — correct heading structure", async ({
   page,
 }) => {
   await page.goto("/");
 
   await expect(page.locator("h1")).toHaveCount(1);
-  const h2Count = await page.locator("h2").count();
-  expect(h2Count).toBeGreaterThanOrEqual(4); // one per project section, plus Contact
+  expect(await page.locator("h2").count()).toBeGreaterThanOrEqual(4); // results, work, projects, contact
+  expect(await page.locator(".project-section h3").count()).toBe(4); // one per project
 });
 
 test("the GitHub contact link is keyboard-reachable", async ({ page }) => {
   await page.goto("/");
   await scrollThroughPage(page);
 
-  const githubLink = page.getByRole("link", { name: /github/i });
+  const githubLink = page.getByRole("link", { name: "GitHub →" }).last();
   await githubLink.scrollIntoViewIfNeeded();
   await githubLink.focus();
   await expect(githubLink).toBeFocused();
