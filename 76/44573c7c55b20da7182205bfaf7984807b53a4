@@ -1,0 +1,19 @@
+cv/cv.yaml
+  s_4b1ea12b8fe685::t_aa7df254ee4e97 38,53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "7644573c7c55b20da7182205bfaf7984807b53a4",
+  "prompts": {},
+  "sessions": {
+    "s_4b1ea12b8fe685": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_4b1ea12b8fe685",
+        "model": "unknown"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
