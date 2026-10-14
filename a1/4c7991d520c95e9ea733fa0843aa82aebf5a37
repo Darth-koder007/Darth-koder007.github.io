@@ -1,0 +1,21 @@
+.github/workflows/ci.yml
+  s_995f924eea4137::t_6aac1a7c65e58f 9-19
+.gitignore
+  s_995f924eea4137::t_b7fb83116e8169 9-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "a14c7991d520c95e9ea733fa0843aa82aebf5a37",
+  "prompts": {},
+  "sessions": {
+    "s_995f924eea4137": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_995f924eea4137",
+        "model": "unknown"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
