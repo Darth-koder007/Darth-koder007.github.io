@@ -1,6 +1,6 @@
 # Portfolio Site
 
-Source for [darth-koder007.github.io](https://darth-koder007.github.io): a single page with one section per project, built with my own component library rather than a generic template.
+Source for [vijaysingh.dev](https://vijaysingh.dev): a single page with one section per project, built with my own component library rather than a generic template.
 
 The projects it links to:
 
@@ -9,7 +9,7 @@ The projects it links to:
 - [02-agentic-codemod-tool](https://github.com/Darth-koder007/02-agentic-codemod-tool): plain-English instruction to a reviewable, type-checked diff
 - [03-rag-doc-search](https://github.com/Darth-koder007/03-rag-doc-search): grounded Q&A over the design system's component source
 
-My CV is published at [`/cv.pdf`](https://darth-koder007.github.io/cv.pdf) and generated from [`cv/cv.yaml`](cv/README.md).
+My CV is published at [`/cv.pdf`](https://vijaysingh.dev/cv.pdf) and generated from [`cv/cv.yaml`](cv/README.md).
 
 ## Why the design system is a real dependency
 
