@@ -25,7 +25,7 @@ export const PROJECTS: ProjectEntry[] = [
     pullQuote:
       'Focus management for Modal and Table\'s controlled/uncontrolled duality were the two places where "looks right" and "is actually correct" diverged the most in testing.',
     status: "live",
-    url: "https://darth-koder007.github.io/00-design-system/",
+    url: "https://vijaysingh.dev/00-design-system/",
     linkLabel: "View live demo",
   },
   {

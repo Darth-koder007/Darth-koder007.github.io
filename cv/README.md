@@ -5,7 +5,7 @@
 
 On every push to `main` that touches `cv/**`, `.github/workflows/render-cv.yml` renders it and
 commits the resulting PDF to `public/cv.pdf`, which that commit's own push then publishes via the
-existing site deploy to `https://darth-koder007.github.io/cv.pdf`.
+existing site deploy to `https://vijaysingh.dev/cv.pdf`.
 
 **One-time setup:** that workflow pushes using a PAT (`secrets.CV_DEPLOY_PAT`), not the default
 `GITHUB_TOKEN` — GitHub doesn't let the default token's pushes trigger other workflows, and this
