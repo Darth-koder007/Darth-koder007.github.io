@@ -1,0 +1,25 @@
+README.md
+  s_53ffbe59253c9f::t_3d3ff3fc21e934 3,12
+cv/README.md
+  s_53ffbe59253c9f::t_9aaae2319fff8b 8
+cv/cv.yaml
+  s_53ffbe59253c9f::t_d68746fdb456c9 6
+src/data/projects.ts
+  s_53ffbe59253c9f::t_a45c1d4100bc21 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "ba3a53d19ef2b6264245b6076a129c37ede4a930",
+  "prompts": {},
+  "sessions": {
+    "s_53ffbe59253c9f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_53ffbe59253c9f",
+        "model": "unknown"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
