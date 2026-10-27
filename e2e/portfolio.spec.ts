@@ -70,7 +70,7 @@ test("has exactly one h1, section h2s, and one h3 per project — correct headin
 
   await expect(page.locator("h1")).toHaveCount(1);
   expect(await page.locator("h2").count()).toBeGreaterThanOrEqual(4); // results, work, projects, contact
-  expect(await page.locator(".project-section h3").count()).toBe(4); // one per project
+  expect(await page.locator(".project-section h3").count()).toBe(5); // one per project
 });
 
 test("the GitHub contact link is keyboard-reachable", async ({ page }) => {

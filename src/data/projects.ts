@@ -63,4 +63,15 @@ export const PROJECTS: ProjectEntry[] = [
     url: "https://github.com/Darth-koder007/03-rag-doc-search",
     linkLabel: "View on GitHub",
   },
+  {
+    id: "event-loop-visualiser",
+    name: "Node Event Loop Visualizer",
+    pitch:
+      "An animated, step-through simulation of how Node.js runs code: the call stack, process.nextTick, promise microtasks and the libuv phases. A pure-TypeScript engine turns typed scenarios into step snapshots, and the React UI only renders them, so stepping backwards is just an index. Six curated scenarios, a predict-the-order mode, keyboard control and reduced-motion support.",
+    tech: ["TypeScript", "React", "Framer Motion", "Vitest"],
+    pullQuote: "The UI only reads steps. Prev/scrub is just an index into the array.",
+    status: "live",
+    url: "https://vijaysingh.dev/event-loop-visualiser/",
+    linkLabel: "View live demo",
+  },
 ];
