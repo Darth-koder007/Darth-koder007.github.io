@@ -6,3 +6,10 @@ dist/
 playwright-report/
 test-results/
 cv/rendercv_output/
+.env.*
+!.env.example
+*.pem
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
