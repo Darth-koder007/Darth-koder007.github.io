@@ -19,7 +19,7 @@ function ContactLinks({ primaryResume = false }: { primaryResume?: boolean }) {
       </a>
       <a
         className="project-link project-link--secondary"
-        href="https://www.linkedin.com/in/vijaysingh-75b335b4"
+        href="https://www.linkedin.com/in/vijay-singh-75b335b4"
       >
         LinkedIn →
       </a>
