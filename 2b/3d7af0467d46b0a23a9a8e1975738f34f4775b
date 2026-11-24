@@ -1,0 +1,27 @@
+.claude/skills/tailor-cv/SKILL.md
+  s_8a37ae7e4c6502::t_ac451e589ce8ad 1-82
+.gitignore
+  s_8a37ae7e4c6502::t_599cdf8ead9826 9-10
+cv/cv.yaml
+  s_8a37ae7e4c6502::t_073dfd680ea346 4,14,19,22-27,29-33,35-43,54,61-64,67-68,75-76,79-83,89-91,93-94,101-108,117,119,121-125
+cv/make_cover_letter_pdf.py
+  s_8a37ae7e4c6502::t_9c81b82810ba5b 1-46
+cv/resume-digest.md
+  s_8a37ae7e4c6502::t_71e8cdcaac07ba 1-110
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "2b3d7af0467d46b0a23a9a8e1975738f34f4775b",
+  "prompts": {},
+  "sessions": {
+    "s_8a37ae7e4c6502": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_8a37ae7e4c6502",
+        "model": "unknown"
+      },
+      "human_author": "Darth-koder007 <vj2010sn@gmail.com>"
+    }
+  }
+}
