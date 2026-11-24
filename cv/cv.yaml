@@ -1,7 +1,7 @@
 cv:
   name: Vijay Singh
   location: Berlin, Germany
-  headline: Senior Software Engineer | Design Systems, TypeScript, Node.js, GCP & Applied AI
+  headline: Senior Frontend Engineer | Design Systems & AI-Augmented Developer Tooling | React, TypeScript
   email: vj2010sn@gmail.com
   website: https://vijaysingh.dev
   social_networks:
@@ -11,92 +11,101 @@ cv:
       username: Darth-koder007
   sections:
     summary:
-      - "Senior engineer who owns Cape, Delivery Hero's design system, and builds the services and tooling around it in TypeScript and Node.js. Brought Cape into Help Center, a customer-facing B2C product, and built Cape Fly, an AI support bot on Google Vertex AI that automates answers to design-system questions. Led a Node/BigQuery/Kubernetes KPI dashboard for executive leadership, and has built GraphQL BFF layers, event-driven processing and production SQL changes across InMobi, Wadi and Paytm."
+      - "Frontend engineer who owns Cape, Delivery Hero's design system, and builds developer tooling around it: a TypeScript static-analysis crawler that tracks adoption across repos, Cape Fly, a RAG support bot on Google Vertex AI, and an MCP-based design-to-code pipeline. Also has hands-on backend experience with GraphQL BFF layers, SQL, event-driven processing and Kubernetes, Terraform and GitOps deployments."
     experience:
       - company: Delivery Hero
         position: Senior Software Engineer
         location: Berlin, Germany
-        start_date: 2024-07
+        start_date: 2024-10
         end_date: present
         highlights:
-          - Designed and built Cape Fly solo, an agentic RAG Slack bot (Gemini on Vertex AI), used
-            by about half of the design-system community; replies went from ~1 day to under 10
+          - Own Cape, Delivery Hero's design system (component library and design tokens shipped
+            as an NPM package, adopted org-wide). Built the Figma Variables to GitHub to token
+            package to component package pipeline.
+          - Designed and built Cape Fly solo, an agentic RAG Slack bot (Gemini on Vertex AI) that
+            answers design-system questions with cited sources and confidence scoring; used by
+            about half of the design-system community, replies went from ~1 day to under 10
             seconds. Ambient mode calls the LLM only after a private opt-in.
-          - Lead engineer on the KPI dashboard for executive engineering leadership (React, Node.js (Hono), BigQuery, Redis,
-            Kubernetes); took over frontend delivery when the project was at risk, escalated API
-            needs early, shipped on the predicted date; led 2 engineers.
-          - Built the internal developer portal frontend from scratch (architecture, CI/CD, sanity
-            tests); shipped chat, application and deployment pages in under a month alongside 3+
-            backend engineers. Worked on a BFF layer that aggregates data from multiple sources and
-            serves it through GraphQL.
+          - Designed a canonical Cape manifest and custom MCP server that, with Figma's MCP,
+            ground Claude's UI generation in real component and token contracts instead of
+            invented markup.
+          - Created Cape Crawler (TypeScript static analysis), which audits design-system adoption
+            across the company's React repositories and identifies migration targets.
           - Brought Cape into Help Center, a customer-facing B2C product (B2C themes, WCAG 2.1 AA
-            accessibility work), co-owning the codebase with the product teams, and into a Next.js
-            ops portal.
+            accessibility work, critical-rendering-path and cold-start performance), co-owning the
+            codebase with the product teams, and into a Next.js ops portal.
+          - Lead engineer on the KPI dashboard for executive engineering leadership (React, Node.js (Hono), BigQuery, Redis,
+            Kubernetes); set up the scaffold, took over frontend delivery when the project was at
+            risk, shipped on the predicted date; led 2 engineers.
+          - Built the frontend of the internal developer portal from scratch (architecture, CI/CD,
+            sanity tests) alongside 3+ backend engineers; contributed to Jarvis, the internal
+            developer platform (service catalog, deploy workflows), and to a BFF layer that
+            aggregates data from multiple sources through GraphQL.
           - Led pre-release hardening for Cape v1.0 and wrote the 0.11 to 1.0 migration codemod;
             5+ product-team plugins adopted in Q2.
           - Authored the RFC and built multi-theme visual regression testing in CI across 20+
             themes, replacing manual theme validation.
-          - Designed a canonical Cape manifest and custom MCP server that, with Figma's MCP,
-            ground Claude's UI generation in real component and token contracts.
-          - Created Cape Crawler (TypeScript static analysis), which audits design-system adoption
-            across the company's React repositories and identifies migration targets.
           - Authored and executed the deprecation of the legacy design system (references
             updated, repos archived, consumers guided).
       - company: Delivery Hero
         position: Software Engineer II
         location: Berlin, Germany
         start_date: 2021-10
-        end_date: 2024-06
+        end_date: 2024-09
         highlights:
           - "Re-architected the design-token structure with the design lead: shipped themes grew 5 to 14 (later 18 incl. B2C) and token bundle size fell 15%; tokens ship as CSS and JS variables across 9 brands in light/dark modes."
           - Built Cape's first component and wrote its engineering guidelines; designed the
             overlay foundation (Dialog, Drawer, Tooltip) and built Grid and Button; added RTL
             support; authored the Table ADR.
           - Set up Cape's CI/CD with Docker-based visual regression testing, semantic versioning
-            with changesets, automated releases, per-PR Storybook previews, Codacy analysis
-            (coverage 90%+), token bundle-size check.
+            with changesets, automated private NPM publishing in a monorepo with GitHub Actions,
+            per-PR Storybook previews, Codacy analysis (coverage 90%+), token bundle-size check.
+          - Built a metrics dashboard and API that track UI-component usage across frontend GitHub
+            repos using a TypeScript parser, the origin of Cape Crawler.
           - Cut dev-environment setup from 10+ to ~4 min and Storybook refresh from 30 s to
             under 10 ms; automated component API docs (-0.5 days per component).
-          - Mentored 7+ contributors; interviewed 5+ graduate candidates.
+          - Onboarded product teams to the design system; mentored 7+ contributors; interviewed
+            5+ graduate candidates.
       - company: InMobi
         position: SDE II / SDE I
         location: Bangalore, India
         start_date: 2019-01
         end_date: 2021-10
         highlights:
-          - Built the UI for the Customer Data Platform, contributing to component design,
-            UX discussions, and project architecture.
+          - Built the UI for the Customer Data Platform as part of the core team, contributing to
+            component design, UX discussions, and project architecture.
           - Led the UI team for the Audience Intelligence Platform, mentoring team members through
             delivery with unit and integration testing.
-          - Built the BFF layer that pulled data from multiple sources and modeled it through
-            GraphQL for the frontend.
-          - Made production database changes in SQL through a Node SQL library, creating new tables
-            to store enriched audience segments.
-          - Took part in bootstrapping InMobi's design system and built reusable components and
-            dynamically generated component docs.
-      - company: Paytm
+          - Built the GraphQL BFF layer that merged multiple data sources for the frontend, and
+            created SQL tables for enriched audience segments through a Node SQL library.
+          - Took part in the initial build of InMobi's design system with architects and the UX
+            lead; built reusable components and dynamically generated component docs.
+      - company: Paytm Payments Bank
         position: Software Engineer
         location: Noida, India
         start_date: 2018-05
         end_date: 2019-01
         highlights:
-          - Built SalaryAccounts Management and Web Remittance, corporate net-banking and
-            money-transfer web applications.
+          - One of the founding engineers of the team. Built the corporate salary-account
+            experience (React, Redux, SQL, Redis, Docker) and the Web Remittance flow (React,
+            Redux, TypeScript, Hapi/Express, state machine, reusable OTP component).
           - Worked on event-driven processing for net banking, handling long-running statement
-            downloads and post-order background processes outside the request path.
-          - Built a BFF layer that merged data from multiple sources and served it through GraphQL.
+            downloads and post-order background processes outside the request path; built a
+            GraphQL BFF layer.
       - company: Wadi.com
         position: Software Development Engineer
         location: Gurgaon, India
         start_date: 2016-01
         end_date: 2018-05
         highlights:
-          - Lead contributor on Wadi Grocery's mobile web app and a new checkout platform (one-click
-            checkout, social login, OTP auth) for grocery delivery across KSA and UAE.
-          - Built the BFF layer that merged data from multiple sources and served it through
-            GraphQL; ran A/B tests on checkout variants.
-          - Made production database changes in SQL through a Node SQL library, adding metadata
-            fields.
+          - Frontend DRI for key parts of checkout; rebuilt it from scratch in React with SSR,
+            critical-CSS inlining and Cypress visual and e2e tests (one-click checkout, social
+            login, OTP auth). Ran A/B tests that led to a unified flow; led frontend of the OTP
+            verification project (Twilio SMS) that cut order cancellations.
+          - Lead contributor on Wadi Grocery's mobile web app for KSA and UAE, and built the
+            checkout web view embedded in the native iOS and Android apps.
+          - Built Origami, the internal ops panel (Angular, Node, SQL, role-based access control)
+            with an in-house CMS, plus RabbitMQ-based order-confirmation email processing.
     education:
       - institution: Dr. A.P.J. Abdul Kalam Technical University
         area: Computer Science
@@ -104,15 +113,15 @@ cv:
         start_date: 2012-01
         end_date: 2016-01
     skills:
-      - label: Backend & data
-        details: TypeScript, Node.js, Hono, GraphQL (BFF layers), SQL, BigQuery, Redis, event-driven processing
-      - label: Cloud & infra
-        details: Google Cloud (BigQuery, Vertex AI), AWS, Kubernetes, Terraform and GitOps deployments, Docker, GitHub Actions, CI/CD
       - label: Frontend
-        details: React, Next.js, JavaScript, Vite, Rollup, pnpm, Turborepo
+        details: React, TypeScript, Redux, Next.js, SSR, Storybook, Jest, Cypress, SCSS, Vite, Rollup, pnpm, Turborepo, Angular (legacy), WCAG 2.1 AA, critical rendering path
       - label: Design systems
-        details: component APIs, design tokens (Figma Variables, Tokens Studio), Storybook, visual regression testing, semantic versioning (changesets), codemods, WCAG 2.1 AA
+        details: component APIs, design tokens (Figma Variables, Tokens Studio), visual regression testing, semantic versioning (changesets), codemods
       - label: AI tooling
-        details: RAG, tool calling, MCP, Google Vertex AI (Gemini), Claude
+        details: RAG, tool calling, MCP servers, Google Vertex AI (Gemini), Claude, Figma API, static analysis (TypeScript parser)
+      - label: Backend & data
+        details: Node.js (Express, Hapi, Hono), GraphQL (BFF), SQL, BigQuery, Redis, MongoDB, RabbitMQ
+      - label: Cloud & infra
+        details: Google Cloud (BigQuery, Vertex AI), AWS, Kubernetes, Terraform, Argo CD and GitOps, Docker, GitHub Actions, CI/CD, Backstage
 design:
   theme: classic
