@@ -13,3 +13,5 @@ cv/rendercv_output/
 *.tfstate.*
 .terraform/
 *.tfvars
+applications/
+cv/*.private.md
